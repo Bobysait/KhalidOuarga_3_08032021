@@ -25,7 +25,7 @@
 
 .heading {
 	@extend                 .centered;
-    
+
 	width					: 100%;
 	padding					: 0 5% 3.5rem 5%;
 	
@@ -46,5 +46,87 @@
 	
 	&__btn {
 		padding				: auto 0;
+	}
+}
+
+
+.howto {
+	@extend                 .container;
+
+	h2 {
+		font-size			: 1.4rem;
+		font-weight			: bold;
+		padding-top			: 3.5rem;
+		padding-bottom		: 1.5rem;
+	}
+
+	ul{
+		list-style			: none;
+	}
+
+	&__title {
+		
+	}
+	
+	&__items {
+		width				: 100%;
+		font-size			: 1rem;
+		
+		display				: flexbox;
+		flex-direction		: column;
+		justify-content		: space-between;
+		
+		counter-reset		: howto__items--counter;
+	}
+	
+	&__item {
+		display				: flex;
+		flex-direction		: row;
+		justify-content		: flex-start;
+		align-items			: center;
+		
+		height				: 4rem;
+		margin-bottom		: 1.5rem;
+		margin-left			: 1.5rem;
+		padding-left		: 1.0rem;
+		
+		color				: $colour-light-font;
+		background			: $colour-light-back;
+		border-radius		: 1.5rem;
+		box-shadow			: 0 0.4rem 1.8rem rgba(0,0,0, 0.15);
+		
+		counter-increment	: howto__items--counter;
+		
+		&:hover {
+			background		: rgba($colour_primary,0.1);
+			.fas {
+				color		: $colour_primary;
+			}
+		}
+		
+		.item--index {
+			transform		: translate(-100%,0);
+			color			: white;
+			background		: $colour_primary;
+			border-radius	: 100%;
+			
+			width			: 1.5rem;
+			text-align		: center;
+				display		: flex;
+				justify-content: center;
+				align-items	: center;
+			
+			&::after {
+				content		: counter(howto__items--counter);
+			}
+		}
+		.fas {
+			color			: grey;
+		}
+	}
+    
+	.item--name {
+		font-weight			: bold;
+		padding-left		: 1.5rem;
 	}
 }
