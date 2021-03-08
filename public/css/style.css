@@ -127,6 +127,7 @@ h2 {
     border: none; }
 
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
