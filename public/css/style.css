@@ -1,9 +1,6 @@
 /* theme colors */
 /* gradients */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-.centered, .geolocalisation, .heading {
-  text-align: center; }
-
 .w50 {
   width: 50%;
   margin: auto; }
@@ -24,7 +21,19 @@
   width: 66.6%;
   margin: auto; }
 
-.theme_titles h2, .howto h2, .restaurants h2 {
+.geolocalisation, .heading {
+  text-align: center; }
+
+.howto, .restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: center;
+  width: 100%;
+  padding: 0 5% 3.5rem 5%; }
+
+.howto h2, .restaurants h2 {
   font-size: 1.4rem;
   font-weight: bold;
   padding-top: 3.5rem;
@@ -174,15 +183,6 @@ h2 {
     padding-right: 1.5rem; }
   .footer a {
     color: inherit; }
-
-.container, .howto, .restaurants {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: center;
-  width: 100%;
-  padding: 0 5% 3.5rem 5%; }
 
 .card {
   position: relative;

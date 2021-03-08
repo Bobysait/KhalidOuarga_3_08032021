@@ -1,21 +1,4 @@
-.container{
-	display					: flex;
-	flex-direction			: column;
-	justify-content			: space-between;
-	align-items				: flex-start;
-	align-content			: center;
-	
-	width					: 100%;
-	padding					: 0 5% 3.5rem 5%;
-}
-
-
 .card{
-	
-	a {
-		text-decoration		: none;
-		color				: inherit;
-	}
 	
 	position				: relative;
 	
@@ -26,15 +9,20 @@
 	
 	margin-bottom			: 1.1rem;
 	
-	&--left {
-		flex-direction		: row;
-		flex-wrap			: no-wrap;
-	}
-	
 	background				: #fff;
 	border-radius			: 15px;
 	border					: none;
 	box-shadow				: 0 0.4rem 0.5rem rgba(0,0,0, 0.07);
+	
+	a {
+		text-decoration		: none;
+		color				: inherit;
+	}
+	
+	&--left {
+		flex-direction		: row;
+		flex-wrap			: no-wrap;
+	}
 	
 	&__image {
 		width				: 100%;
@@ -42,6 +30,7 @@
 		object-fit			: cover;
 		border-radius		: 16px 16px 0 0;
 	}
+
 	.new &__desc::before {
 		position			: absolute;
 		top					: 0.8rem;
@@ -65,6 +54,7 @@
 		padding				: 1rem 0;
 		margin				: auto 1rem;
 	}
+
 	&--left > &__desc {
 		margin-top			: 1rem;
 		padding				: 0;
@@ -72,8 +62,5 @@
 	
 	&__title {
 		font-weight			: bold;
-	}
-	
-	&__location {
 	}
 }
