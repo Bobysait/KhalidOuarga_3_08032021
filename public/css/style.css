@@ -24,6 +24,12 @@
   width: 66.6%;
   margin: auto; }
 
+.theme_titles h2, .howto h2, .restaurants h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-top: 3.5rem;
+  padding-bottom: 1.5rem; }
+
 /* -- RESET -- */
 /* Box sizing rules */
 *,
@@ -168,7 +174,7 @@ h2 {
   .footer a {
     color: inherit; }
 
-.container, .howto {
+.container, .howto, .restaurants {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -176,6 +182,50 @@ h2 {
   align-content: center;
   width: 100%;
   padding: 0 5% 3.5rem 5%; }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.1rem;
+  background: #fff;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.07); }
+  .card a {
+    text-decoration: none;
+    color: inherit; }
+  .card--left {
+    flex-direction: row;
+    flex-wrap: no-wrap; }
+  .card__image {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0; }
+  .new .card__desc::before {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    content: 'Nouveau';
+    color: green;
+    background: #99E2D0;
+    display: block; }
+  .card--left > .card__image {
+    width: 40%;
+    border-radius: 16px 0 0 16px; }
+  .card__desc {
+    padding: 1rem 0;
+    margin: auto 1rem; }
+  .card--left > .card__desc {
+    margin-top: 1rem;
+    padding: 0; }
+  .card__title {
+    font-weight: bold; }
 
 .geolocalisation {
   position: relative;
@@ -209,11 +259,6 @@ h2 {
   .heading__btn {
     padding: auto 0; }
 
-.howto h2 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  padding-top: 3.5rem;
-  padding-bottom: 1.5rem; }
 .howto ul {
   list-style: none; }
 .howto__items {
@@ -258,5 +303,9 @@ h2 {
 .howto .item--name {
   font-weight: bold;
   padding-left: 1.5rem; }
+
+.restaurants {
+  color: #000;
+  background: #f6f6f6; }
 
 /*# sourceMappingURL=style.css.map */
