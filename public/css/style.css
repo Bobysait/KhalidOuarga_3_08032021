@@ -1,7 +1,28 @@
 /* theme colors */
+/* gradients */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-.centered, .geolocalisation {
+.centered, .geolocalisation, .heading {
   text-align: center; }
+
+.w50 {
+  width: 50%;
+  margin: auto; }
+
+.w60 {
+  width: 60%;
+  margin: auto; }
+
+.w80 {
+  width: 80%;
+  margin: auto; }
+
+.c13 {
+  width: 33.3%;
+  margin: auto; }
+
+.c23 {
+  width: 66.6%;
+  margin: auto; }
 
 /* -- RESET -- */
 /* Box sizing rules */
@@ -87,6 +108,18 @@ h1 {
 h2 {
   font-size: 1.1rem; }
 
+.btn {
+  padding: 1rem 0;
+  border-radius: 2rem;
+  border: none;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
+  cursor: pointer; }
+  .btn:hover {
+    border: none; }
+
 .header {
   display: flex;
   align-items: center;
@@ -150,5 +183,21 @@ h2 {
       padding-left: 1rem;
       font-family: 'Roboto', verdana, sans-serif;
       font-weight: normal; }
+
+.heading {
+  width: 100%;
+  padding: 0 5% 3.5rem 5%;
+  color: #000;
+  background: #f6f6f6; }
+  .heading__title {
+    width: 75%;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 2.5rem; }
+  .heading__desc {
+    padding-bottom: 1.5rem; }
+  .heading__btn {
+    padding: auto 0; }
 
 /*# sourceMappingURL=style.css.map */

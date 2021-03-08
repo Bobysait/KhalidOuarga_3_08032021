@@ -1,6 +1,6 @@
 .geolocalisation{
     @extend                 .centered;
-    
+
 	position				: relative;
 	z-index					: 0;
 	
@@ -20,5 +20,31 @@
 			font-family		: 'Roboto', verdana, sans-serif;
 			font-weight		: normal;
 		}
+	}
+}
+
+.heading {
+	@extend                 .centered;
+    
+	width					: 100%;
+	padding					: 0 5% 3.5rem 5%;
+	
+	color					: $colour-light-font;
+	background				: $colour-light-back;
+	
+	&__title {
+		width				: 75%;
+		margin				: auto;
+		font-size			: 1.5rem;
+		font-weight			: bold;
+		padding-top			: 2.5rem;
+	}
+	
+	&__desc {
+		padding-bottom		: 1.5rem;
+	}
+	
+	&__btn {
+		padding				: auto 0;
 	}
 }

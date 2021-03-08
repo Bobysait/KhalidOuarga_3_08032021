@@ -14,3 +14,11 @@ $colour-dark-back		: #eaeaea;
 
 $colour-darker-font		: #fff;
 $colour-darker-back		: #353535;
+
+/* gradients */
+$linear_gradient-ps : linear-gradient($colour_primary,$colour_secondary);
+$linear_gradient-pt : linear-gradient($colour_primary,$colour_tertiary);
+$linear_gradient-sp : linear-gradient($colour_secondary,$colour_primary);
+$linear_gradient-st : linear-gradient($colour_secondary,$colour_tertiary);
+$linear_gradient-tp : linear-gradient($colour_tertiary,$colour_primary);
+$linear_gradient-ts : linear-gradient($colour_tertiary,$colour_secondary);
