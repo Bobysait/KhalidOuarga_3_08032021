@@ -1,0 +1,28 @@
+.header{
+	display					: flex;
+	align-items				: center;
+	
+	width					: 100%;
+	height					: 4rem;
+	padding					: 1.5rem 0;
+
+	font-size				: 1.0em;
+	background				: #fff;
+	box-shadow				: 0 0 10px rgba(0,0,0, 0.2);
+
+	color					: black;
+	
+    z-index                 : 1;
+    
+    /* for the "prev" arrow link of restaurants pages */
+	a {
+		position			: absolute;
+		color				: inherit;
+		left				: 5%;
+	}
+	
+	&__logo{
+		display				: block; /* svg is inline by default */
+		margin				: auto;
+	}
+}
