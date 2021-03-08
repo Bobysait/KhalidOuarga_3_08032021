@@ -1,4 +1,8 @@
 /* theme colors */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.centered, .geolocalisation {
+  text-align: center; }
+
 /* -- RESET -- */
 /* Box sizing rules */
 *,
@@ -67,6 +71,22 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
+* {
+  font-family: 'Roboto', verdana, sans-serif;
+  font-size: 1em;
+  font-weight: normal; }
+
+.logo {
+  font-family: 'Shrikhand', sans-serif; }
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center; }
+
+h2 {
+  font-size: 1.1rem; }
+
 .header {
   display: flex;
   align-items: center;
@@ -114,5 +134,21 @@ select {
     padding-right: 1.5rem; }
   .footer a {
     color: inherit; }
+
+.geolocalisation {
+  position: relative;
+  z-index: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: #eaeaea;
+  color: #000; }
+  .geolocalisation .fa-map-marker-alt {
+    margin: auto;
+    padding-right: 1rem; }
+    .geolocalisation .fa-map-marker-alt::after {
+      content: "Paris, Belleville";
+      padding-left: 1rem;
+      font-family: 'Roboto', verdana, sans-serif;
+      font-weight: normal; }
 
 /*# sourceMappingURL=style.css.map */

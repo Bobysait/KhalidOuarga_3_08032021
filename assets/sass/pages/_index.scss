@@ -1,0 +1,24 @@
+.geolocalisation{
+    @extend                 .centered;
+    
+	position				: relative;
+	z-index					: 0;
+	
+	padding-top				: 1rem;
+	padding-bottom			: 1rem;
+	
+	background				: $colour-dark-back;
+	color					: $colour-dark-font;
+	
+	.fa-map-marker-alt{
+		margin				: auto;
+		padding-right		: 1rem;
+		
+		&::after {
+			content			: "Paris, Belleville";
+			padding-left	: 1rem;
+			font-family		: 'Roboto', verdana, sans-serif;
+			font-weight		: normal;
+		}
+	}
+}
