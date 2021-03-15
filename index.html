@@ -1,14 +1,203 @@
 <!doctype HTML>
-	
+
+<html lang="fr-FR">
+
 	<head>
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta charset="UTF-8">
 		<script src="https://kit.fontawesome.com/dc80972f73.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./public/css/style.css">
 		<title>Oh My Food</title>
+		
 	</head>
 	
 	<body>
-    <h1>OhMyFood</h1>
-    <p>coming soon ...</p>
-  </body>
-</html
+
+		<header class="header container__box">
+			<div class="container">
+				<img
+					src		=	"./public/img/ohmyfood.svg"
+					alt		=	"logo Oh My Food"
+					height	=	"28"
+					class	=	"header__logo"
+				/>
+			</div>
+		</header>
+		
+
+		<main class="container__box">
+			<div class="container">
+
+				<div class="geolocalisation">
+					<i class="fas fa-map-marker-alt"></i>
+				</div>
+				
+				<div class="desktop-flex">
+					<section class="heading bloc">
+						
+						<h1 class="heading__title">Réservez le menu qui vous convient</h1>
+						
+						<p class="heading__desc">Découvrez des restaurants d'exception sélectionnés par nos soins.</p>
+						
+						<button class="btn heading__btn">Explorez nos restaurants</button>
+						
+					</section>
+					
+
+					<section class="howto bloc">
+						
+						<h2 class="howto__title">Fonctionnement</h2>
+						
+						<ul class="howto__items">
+							
+							<li class="howto__item">
+								
+								<span class="item--index"></span>
+								<i class="fas fa-mobile-alt"></i>
+								<span class="item--name">Choisissez un restaurant</span>
+								
+							</li>
+							
+							<li class="howto__item">
+								
+								<span class="item--index"></span>
+								<i class="fas fa-list-ul"></i>
+								<span class="item--name">Composez votre menu</span>
+								
+							</li>
+							
+							<li class="howto__item">
+								
+								<span class="item--index"></span>
+								<i class="fas fa-store"></i>
+								<span class="item--name">Dégustez au restaurant</span>
+								
+							</li>
+							
+						</ul>
+						
+					</section>
+				</div>				
+
+				<section class="restaurants" id="restaurants">
+					
+					<h2 class="restaurants__title bloc">Restaurants</h2>
+					
+					<div class="restaurants__box bloc">
+						
+						<div class="card new">
+							<a href="./palette_gout.html">
+								<img src="./public/img/3_medium/palette_gout.jpg" alt="palette du goût" class="card__image" />
+								<div class="card__desc">
+									<svg width="26" height="26" class="like">
+										<path class="like--line" d="M2,16 v-14 h14 a7 7 0 0 1 0 14 a7 7 0 0 1 -14 0 z"/>
+									</svg>
+									<h3 class="card__title">La Palette du goût</h3>
+									<p class="card__location">Ménilmontant</p>
+								</div>
+							</a>
+						</div>
+						
+						<div class="card new">
+							<a href="./note_enchantee.html">
+								<img src="./public/img/3_medium/note_enchantee.jpg" alt="note enchantée" class="card__image" />
+								<div class="card__desc">
+									<svg width="26" height="26" class="like">
+										<path class="like--line" d="M2,16 v-14 h14 a7 7 0 0 1 0 14 a7 7 0 0 1 -14 0 z"/>
+									</svg>
+									<h3 class="card__title">La note enchantée</h3>
+									<p class="card__location">Charonne</p>
+								</div>
+							</a>
+						</div>
+						
+						<div class="card">
+							<a href="./a_la_francaise.html">
+							<img src="./public/img/3_medium/francaise.jpg" alt="a la française" class="card__image" />
+							<div class="card__desc">
+								<svg width="26" height="26" class="like">
+										<path class="like--line" d="M2,16 v-14 h14 a7 7 0 0 1 0 14 a7 7 0 0 1 -14 0 z"/>
+									</svg>
+								<h3 class="card__title">A la française</h3>
+								<p class="card__location">Cité Rouge</p>
+							</div>
+							</a>
+						</div>
+						
+						<div class="card">
+							<a href="./delice_des_sens.html">
+								<img src="./public/img/3_medium/delice_sens.jpg" alt="délice des sens" class="card__image" />
+								<div class="card__desc">
+									<svg width="26" height="26" class="like">
+										<path class="like--line" d="M2,16 v-14 h14 a7 7 0 0 1 0 14 a7 7 0 0 1 -14 0 z"/>
+									</svg>
+									<h3 class="card__title">Le délice des sens</h3>
+									<p class="card__location">Folie Méricourt</p>
+								</div>
+							</a>
+						</div>
+						
+					</div>
+					
+				</section>
+				
+			</div>
+		</main>
+
+		<footer class="footer container__box">
+
+			<div class="wrapper container">
+
+				<img
+					src		=	"./public/img/ohmyfood.png"
+					alt		=	"logo Oh My Food"
+					class	=	"footer__logo"
+				/>
+				
+				<ul class="footer__items">
+					
+					<li class="footer__item">
+						<i class="fas fa-utensils"></i>
+						<span class="item--name"> Proposer un restaurant</span>
+					</li>
+					
+					<li class="footer__item">
+						<i class="fas fa-hands-helping"></i>
+						<span class="item--name"> Devenir partenaire</span>
+					</li>
+					
+					<li class="footer__item">
+						<a href="./cgu.html" class="item--name">Mentions légales</a>
+					</li>
+					
+					<li class="footer__item">
+						<a href="mailto:contact@ohmyfood.com" class="item--name"> Contact</a>
+					</li>
+					
+				</ul>
+			</div>
+
+		</footer>
+
+
+		<div class="loader anim-length-long">
+			<div class="loader__actors">
+				<div class="loader__circle"></div>
+				<div class="loader__emitter"></div>
+				<div class="loader__emitter"></div>
+				<div class="loader__stove">
+					<svg width="200px" height="23px">
+						<path class="loader__stove__container" d="M120,6 h75 v-5 h-90 l-10,10 a24,24 0,0,1 -20,10 h-40 a24,24 0,0,1 -20,-10 l-10,-10"/>
+						<path class="loader__stove__content" d = "M15,5 l4,4 a20,20 0 0 0 16,8 h40 a20,20 0 0 0 16,-8 l4,-4" />
+						<!-- stove with corners
+						<path class="loader__stove__container" d="M120,6 h75 v-5 h-90 l-20,20 h-60 l-20,-20"/>
+						<path class="loader__stove__content" d = "M15,5 l12,12 h55 l12,-12" />
+						-->
+					</svg>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

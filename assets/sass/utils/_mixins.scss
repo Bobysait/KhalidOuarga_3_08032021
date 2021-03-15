@@ -1,0 +1,47 @@
+@mixin _set-resolution($v) {
+	@each $key, $value in map-get($v,"div"){ #{$key} : #{$value}; }
+}
+
+@function min-query ($v){ @return ( "min-width : "+map-get(map-get($breakpoints, $v), "query-min")) }
+
+@mixin _clamp-resolution($v) {
+	@media all and ( min-width: map-get($v, "query-min") ) {
+		@each $key, $value in map-get($v,"div"){ #{$key} : #{$value}; }
+	}
+}
+
+@mixin clamp-resolution($type:"none") {
+	@if $type=="none" {
+		@each $type, $v in $breakpoints {
+			@if $type=="mobile"{
+				@include _set-resolution($v);
+			}@else{
+				@include _clamp-resolution($v);
+			}
+		}
+	}@else{
+		@if $type=="mobile"{
+			@include _set-resolution(map-get($breakpoints, $type));
+		}@else{
+			@include _clamp-resolution(map-get($breakpoints, $type));
+		}
+	}
+};
+
+@mixin responsive($attribute) {
+	@if ($attribute=="resolution"){
+		@each $type, $v in $breakpoints {
+			@media all and ( min-width: map-get($v, "query-min") ) {
+				@each $k in $resolution-keys {
+					#{$k} : map-get(map-get($v,"div"), $k);
+				}
+			}
+		}
+	}@else{
+		@each $type, $v in $breakpoints {
+			@media all and ( min-width: map-get($v, "query-min") ) {
+				#{$attribute} : map-get(map-get($v,"div"), $attribute);
+			}
+		}
+	}
+}

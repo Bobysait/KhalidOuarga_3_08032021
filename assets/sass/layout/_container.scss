@@ -1,0 +1,114 @@
+body {
+	background				: #fff;
+}
+
+.bloc {
+	width					: 100%;
+	margin					: 0 0;
+	padding					: 0 5% 3.5rem 5%;
+
+	transition				: background 1s, border 1s, border-radius 1s, width 1s, margin 1s;
+
+	@media all and (min-query("tablet")){
+		width				: 90%;
+		margin				: 2rem 5%;
+		border-radius		: 2rem;
+		background			: $colour_light-back;
+		box-shadow			: 0 0.5rem 1rem rgba(black,0.15);
+	}
+}
+
+.container__box {
+	width : 100%;
+	margin : auto;
+}
+
+.container {
+	@include				responsive("resolution");
+	transition				: width 2s ease-in-out;
+}
+
+.card{
+	
+	position				: relative;
+	
+	display					: flex;
+	flex-direction			: column;
+	
+	width					: 100%;
+	
+	margin-bottom			: 1.1rem;
+	
+	background				: #fff;
+	border-radius			: 15px;
+	border					: none;
+	box-shadow				: 0 0.4rem 0.5rem rgba(0,0,0, 0.07);
+	
+	a {
+		text-decoration		: none;
+		color				: inherit;
+	}
+	
+	&--left {
+		flex-direction		: row;
+		flex-wrap			: nowrap;
+	}
+	
+	&__image {
+		width				: 100%;
+		height				: 11rem;
+		object-fit			: cover;
+		border-radius		: 16px 16px 0 0;
+	}
+
+	.new &__desc::before {
+		position			: absolute;
+		top					: 0.8rem;
+		right				: 0.8rem;
+		width				: auto;
+		height				: auto;
+		padding				: 0.5rem;
+		
+		content				: 'Nouveau';
+		color				: green;
+		background			: $colour_tertiary;
+		display				: block;
+	}
+	
+	&--left > &__image {
+		width				: 40%;
+		border-radius		: 16px 0 0 16px;
+	}
+	
+	&__desc {
+		padding				: 1rem 0;
+		margin				: auto 1rem;
+	}
+
+	&--left > &__desc {
+		margin-top			: 1rem;
+		padding				: 0;
+	}
+	
+	&__title {
+		font-weight			: bold;
+	}
+}
+
+.like {
+	position			: absolute;
+	right				: 1rem;
+	
+	&--line {
+		stroke			: purple;
+		stroke-width	: 1;
+		fill			: rgba(#f0f, 0.01);
+		transform-origin: 12px 11px;
+		transform		: rotate(-135deg);
+		/* clip-path		: inset(0px); */
+		transition		: fill 1s ease-in-out;
+		&:hover {
+			fill		: #f0f;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+
+@keyframes loader__anim {
+	0% { opacity : 1.0;}
+   75% { opacity : 1.0;}
+   99% { opacity : 0.0; transform:scale(1);}
+   100%{ transform:scale(0); }
+}
+
+@keyframes loader__anim--circle {
+   0% { transform : translate(-0.7rem,-1.5rem); box-shadow : 1.2rem 1.0rem $loader-circle-shadow-blur-1 $loader-circle-shadow-color; }
+  20% { transform : translate(-0.2rem,-1.5rem); box-shadow : 1.0rem 1.0rem $loader-circle-shadow-blur-2 $loader-circle-shadow-color; }
+  50% { transform : translate(-0.7rem,-2.0rem); box-shadow : 1.2rem 1.2rem $loader-circle-shadow-blur-1 $loader-circle-shadow-color; }
+  80% { transform : translate(-0.2rem,-1.2rem); box-shadow : 1.0rem 0.7rem $loader-circle-shadow-blur-2 $loader-circle-shadow-color; }
+  100%{ transform : translate(-0.7rem,-1.5rem); box-shadow : 1.2rem 1.0rem $loader-circle-shadow-blur-1 $loader-circle-shadow-color; }
+}
+@keyframes loader__anim--rotation {
+   0% { transform : rotate(  0deg); }
+  100%{ transform : rotate(360deg); }
+}
+
+@keyframes loader__anim--oh {
+	0% { opacity: 0; transform: translate(30px,   0px) rotate( 30deg) scale(1); }
+   15% { opacity: 1; color:#fd8; }
+   75% { opacity: 1; color:$colour_primary; }
+   100%{ opacity: 0; transform: translate(30px,-150px) rotate(-50deg) scale(0.5); }
+}
+@keyframes loader__anim--my {
+	0% { opacity: 0; transform: translate(50px,   0px) rotate(-40deg) scale(1); }
+	15% { opacity: 1; color:#fd8; }
+	75% { opacity: 1; color:$colour_secondary; }
+   100%{ opacity: 0; transform: translate(40px,-150px) rotate( 80deg) scale(0.5); }
+}
+@keyframes loader__anim--food {
+	0% { opacity: 0; transform: translate(70px,   0px) rotate( 60deg) scale(1); }
+	15% { opacity: 1; color:#fd8; }
+	75% { opacity: 1; color:$colour_tertiary; }
+   100%{ opacity: 0; transform: translate(60px,-150px) rotate(-30deg) scale(0.5); }
+}
+
+@keyframes loader__anim--stove {
+	0% {transform: rotate(-1deg) translate( 0px,  1px);}
+   10% {transform: rotate( 1deg) translate(-2px,  2px);}
+   20% {transform: rotate( 0deg) translate(-1px,  0px);}
+   30% {transform: rotate( 1deg) translate( 2px, -1px);}
+   40% {transform: rotate(-1deg) translate( 1px, -2px);}
+   50% {transform: rotate( 1deg) translate(-2px,  1px);}
+   60% {transform: rotate( 2deg) translate( 0px,  2px);}
+   70% {transform: rotate( 1deg) translate(-1px,  1px);}
+   80% {transform: rotate(-1deg) translate(-1px, -1px);}
+   90% {transform: rotate( 0deg) translate( 1px,  2px);}
+   100%{transform: rotate(-1deg) translate( 2px,  1px);}
+}
+
+
+@keyframes anim--reveal-photo{
+	0% {
+		opacity					: 0%;
+	}
+	10% {
+		opacity					: 0%;
+	}
+	100% {
+		opacity					: 100%;
+	}
+}
+
+@keyframes anim--fadein {
+	1% {
+		transform : translateY(-3rem);
+		opacity : 0;
+	}
+	100% {
+		opacity : 1;
+		transform : translateY(0);
+	}
+}
