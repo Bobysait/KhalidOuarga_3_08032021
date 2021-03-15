@@ -1,15 +1,19 @@
 .geolocalisation{
-    @extend                 %centered;
+    @extend                 %text-centered;
     
+	width					: 100%;
+
 	position				: relative;
 	z-index					: 0;
 	
 	padding-top				: 1rem;
 	padding-bottom			: 1rem;
 	
-	background				: $colour-dark-back;
-	color					: $colour-dark-font;
+	background				: $colour_dark-back;
+	color					: $colour_dark-font;
 	
+	transition : width 1s, position 1s, border 1s, border-radius 1s;
+
 	.fa-map-marker-alt{
 		margin				: auto;
 		padding-right		: 1rem;
@@ -21,16 +25,37 @@
 			font-weight		: normal;
 		}
 	}
+
+	@media all and (min-query("desktop")){
+		float				: right;
+		width				: 15rem;
+		margin-top			: -3rem;
+		margin-right		: 3rem;
+		padding				: 0.5rem 1rem;
+		border-radius		: 2rem;
+		border				: 1px solid rgba(black,0.3);
+		box-shadow			: inset -2px -2px 0.5rem rgba(black,0.05);
+		z-index : 1;
+	}
+}
+
+.desktop-flex {
+	display					: flex;
+	flex-direction			: column;
+	justify-content			: space-around;
+	align-content			: center;
+	align-items				: center;
+	
+	@media all and (min-query("desktop")){
+		flex-direction		: row;
+	}
 }
 
 .heading {
-	@extend                 %centered;
-
-	width					: 100%;
-	padding					: 0 5% 3.5rem 5%;
+	@extend                 %text-centered;
 	
-	color					: $colour-light-font;
-	background				: $colour-light-back;
+	color					: $colour_light-font;
+	background				: $colour_light-back;
 	
 	&__title {
 		width				: 75%;
@@ -43,34 +68,33 @@
 	&__desc {
 		padding-bottom		: 1.5rem;
 	}
-	
-	&__btn {
-		padding				: auto 0;
+
+	@media all and (min-query("desktop")){
+		width				: 350px;
+		display				: inline-block;
+		border-radius		: 2rem;
+		margin				: 2rem auto auto auto;
 	}
 }
 
 
 .howto {
-	@extend                 %container;
+	@extend					%text-centered;
     @extend                 %theme_titles;
 
 	ul{
 		list-style			: none;
 	}
 
-	&__title {
-		
-	}
-	
 	&__items {
 		width				: 100%;
 		font-size			: 1rem;
 		
-		display				: flexbox;
+		display				: flex;
 		flex-direction		: column;
 		justify-content		: space-between;
 		
-		counter-reset		: howto__items--counter;
+		counter-reset		: howto_items-counter;
 	}
 	
 	&__item {
@@ -84,15 +108,17 @@
 		margin-left			: 1.5rem;
 		padding-left		: 1.0rem;
 		
-		color				: $colour-light-font;
-		background			: $colour-light-back;
+		color				: $colour_light-font;
+		background			: $colour_light-back;
 		border-radius		: 1.5rem;
 		box-shadow			: 0 0.4rem 1.8rem rgba(0,0,0, 0.15);
 		
-		counter-increment	: howto__items--counter;
-		
+		counter-increment	: howto_items-counter;
+		transition			: transform 400ms, background-color 250ms;
+
 		&:hover {
 			background		: rgba($colour_primary,0.1);
+			transform		: scale(1.05);
 			.fas {
 				color		: $colour_primary;
 			}
@@ -111,7 +137,7 @@
 				align-items	: center;
 			
 			&::after {
-				content		: counter(howto__items--counter);
+				content		: counter(howto_items-counter);
 			}
 		}
 		.fas {
@@ -123,6 +149,11 @@
 		font-weight			: bold;
 		padding-left		: 1.5rem;
 	}
+
+	@media all and (min-query("desktop")){
+		display				: inline-block;
+		width				: 450px;
+	}
 }
 
 
@@ -130,9 +161,60 @@
     @extend                 %container;
     @extend                 %theme_titles;
     
-	color					: $colour-light-font;
-	background				: $colour-light-back;
-	
-	&__title {
+	color					: $colour_light-font;
+	background				: $colour_light-back;
+	transition				: background 1s;
+
+	@media all and (min-query("tablet")){
+		background			: $colour_lighter-back;
 	}
+	
+
+	@media all and (min-query("desktop")){
+		border-radius		: 2rem;
+		margin-bottom		: 5rem;
+	}
+
+	& h2 {
+		width				: 100%;
+		max-width			: 500px;
+		margin				: 0 0;
+
+		@media all and (min-query("tablet")){
+			margin-top		: 3rem;
+			padding			: 1rem 2rem;
+			background		: $colour_light-back;
+			border-radius	: 0 2rem 0 2rem;
+			width			: auto;
+		}
+	}
+
+	&__box {
+
+		display				: flex;
+		flex-direction		: row;
+		flex-wrap			: wrap;
+		justify-content		: space-around;
+		
+		width				: 100%;
+		
+		@media all and (min-query("tablet")){
+			background		: $colour_light-back;
+			width			: auto;
+			margin			: 0 2rem;
+			padding			: 4rem 2rem;
+			border-radius	: 0 2rem 2rem 2rem;
+		}
+
+		.card {
+			max-width		: 500px;
+			@media all and (min-query("tablet")){
+				margin-bottom : 2rem;
+			}
+			@media all and (min-query("desktop")){
+				max-width	: 45%;
+			}
+		}
+	}
+
 }

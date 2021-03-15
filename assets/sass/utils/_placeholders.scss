@@ -1,4 +1,9 @@
 %centered{
+	margin-left				: auto;
+	margin-right			: auto;
+}
+
+%text-centered{
 	text-align				: center;
 }
 
@@ -20,4 +25,26 @@
         padding-top			: 3.5rem;
         padding-bottom		: 1.5rem;
     }
+}
+
+@for $i from 1 through 9 {
+	#{"%w"}#{$i}0 {
+		width : #{$i}0%;
+		margin : auto;
+	}
+}
+
+%w100 {
+	width : 100%;
+	margin : 0 auto;
+}
+
+@for $j from 2 through 7 {
+	$v : floor(100000.0 / $j) / 1000.0 - 0.00001;
+	@for $i from 1 through $j {
+		#{"%c"}#{$i}#{$j} {
+			width : $i*$v#{"%"};
+			margin : auto;
+		}
+	}
 }

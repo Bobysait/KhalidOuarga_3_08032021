@@ -4,11 +4,14 @@
 @import "./utils/extensions";
 @import "./utils/placeholders";
 
+@import "./animations/animators";
+
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
 
+@import "./layout/loader";
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/footer";
@@ -16,3 +19,4 @@
 @import "./layout/form";
 
 @import "./pages/index";
+@import "./pages/restaurants";
