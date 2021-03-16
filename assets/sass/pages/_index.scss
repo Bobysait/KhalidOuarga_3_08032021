@@ -213,6 +213,10 @@
 			background		: $colour_light-back;
 			border-radius	: 0 2rem 0 2rem;
 			width			: auto;
+
+			&::before {
+				border-radius: 0 2rem 0 2rem;
+			}
 		}
 	}
 
@@ -231,6 +235,9 @@
 			margin			: 0 2rem;
 			padding			: 4rem 2rem;
 			border-radius	: 0 2rem 2rem 2rem;
+			&::before {
+				border-radius: 0 2rem 2rem 2rem;
+			}
 		}
 
 		.card {

@@ -20,7 +20,10 @@
 	
 	z-index                 : 1;
 
-	transition : height 1s;
+	@media all and (min-query("tablet")){
+		transition			: height 1s;
+	}
+
 	@media all and (min-query("desktop")){
 		height				: 7rem;
 	}
@@ -35,8 +38,11 @@
 	&__logo{
 		display				: block; /* svg is inline by default */
 		margin				: auto;
+		
+		@media all and (min-query("tablet")){
+			transition		: transform 1s;
+		}
 
-		transition : transform 1s;
 		@media all and (min-query("desktop")){
 			transform		: scale(1.5);
 		}
