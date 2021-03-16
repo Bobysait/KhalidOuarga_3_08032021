@@ -70,11 +70,12 @@
 	&__desc {
 		padding-bottom		: 1.5rem;
 	}
-
+	@media all and (min-query("tablet")){
+		border-radius		: 2rem;
+	}
 	@media all and (min-query("desktop")){
 		width				: 350px;
 		display				: inline-block;
-		border-radius		: 2rem;
 		margin				: 2rem auto auto auto;
 	}
 }
