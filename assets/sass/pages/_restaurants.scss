@@ -1,19 +1,20 @@
 .restaurant {
 
-	transition						: border-radius 2s, background 2s, margin 2s, width 2s ;
+	background						: $colour_lighter-back;
+	transition						: border-radius 2s, margin 2s, width 2s ;
 	
 	@media all and (min-query("tablet")){
-		background					: $colour_lighter-back;
-		margin : 2rem 4.99%;
-		width : 90%;
+		width						: 90%;
+		margin						: 2rem 4.99%;
 	}
 	
 	&.container__box {
 		@media all and (min-query("desktop")){
-			margin					: auto;
+			position				: relative;
+
 			width					: 95%;
 			max-width				: 900px;
-			position				: relative;
+			margin					: auto;
 		}
 	}
 
@@ -25,7 +26,8 @@
 		flex-wrap					: wrap;
 		align-items					: center;
 		background					: $colour_light-back;
-		transition					: border-radius 2s, background 2s, margin 2s ;
+
+		transition					: border-radius 2s, margin 2s ;
 
 		@media all and (min-query("tablet")){
 			border-radius			: 2rem;
@@ -41,9 +43,10 @@
 			padding					: 2rem 2rem 1rem 2rem;
 
 			border-radius			: 3rem;
-			background				: $colour_light-back;
 			left					: -2.5rem;
 			top						: -2.5rem;
+
+			transition				: border-radius 2s, margin 2s ;
 		}
 
 		/*
@@ -149,7 +152,7 @@
 		background					: $colour_light-back;
 		width						: 100%;
 		padding-bottom				: 5rem;
-		transition : border-radius 2s, padding 2s;
+		transition					: border-radius 2s, padding 2s;
 		
 		@media all and (min-query("tablet")){
 			border-radius			: 2rem;

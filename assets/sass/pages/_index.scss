@@ -12,7 +12,9 @@
 	background				: $colour_dark-back;
 	color					: $colour_dark-font;
 	
-	transition : width 1s, position 1s, border 1s, border-radius 1s;
+	@media all and (min-query("tablet")){
+		transition			: width 1s, border 1s, border-radius 1s;
+	}
 
 	.fa-map-marker-alt{
 		margin				: auto;
@@ -103,6 +105,8 @@
 		justify-content		: flex-start;
 		align-items			: center;
 		
+		position			: relative;
+		
 		height				: 4rem;
 		margin-bottom		: 1.5rem;
 		margin-left			: 1.5rem;
@@ -114,11 +118,26 @@
 		box-shadow			: 0 0.4rem 1.8rem rgba(0,0,0, 0.15);
 		
 		counter-increment	: howto_items-counter;
-		transition			: transform 400ms, background-color 250ms;
+		transition			: transform 400ms;
+
+		&::after {
+			content			: "";
+			position		: absolute;
+			top : 0; bottom : 0; left : 0; right : 0;
+
+			border-radius	: 1.5rem;
+			background		: rgba($colour_primary,0.1);
+			opacity			: 0;
+			transition		: opacity 250ms;
+		}
 
 		&:hover {
-			background		: rgba($colour_primary,0.1);
 			transform		: scale(1.05);
+
+			&::after {
+				opacity		: 1;
+			}
+
 			.fas {
 				color		: $colour_primary;
 			}
@@ -163,15 +182,22 @@
     
 	color					: $colour_light-font;
 	background				: $colour_light-back;
-	transition				: background 1s;
+	position				: relative;
+
+	&::before {
+		@include after-background;
+		background			: $colour_lighter-back;
+		opacity				: 0;
+		transition			: opacity 2s;
+	}
 
 	@media all and (min-query("tablet")){
-		background			: $colour_lighter-back;
+		&::before {
+			opacity			: 1;
+		}
 	}
 	
-
 	@media all and (min-query("desktop")){
-		border-radius		: 2rem;
 		margin-bottom		: 5rem;
 	}
 
@@ -179,6 +205,7 @@
 		width				: 100%;
 		max-width			: 500px;
 		margin				: 0 0;
+		z-index : 1;
 
 		@media all and (min-query("tablet")){
 			margin-top		: 3rem;
@@ -190,7 +217,7 @@
 	}
 
 	&__box {
-
+		z-index : 1;
 		display				: flex;
 		flex-direction		: row;
 		flex-wrap			: wrap;
