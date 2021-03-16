@@ -229,18 +229,30 @@ h2 {
   border: none;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(#ff79da, rgba(147, 86, 220, 0.7));
-  background-color: #9356dc;
+  background-image: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  transition: background-color 250ms, color 250ms, text-shadow 400ms ease-in-out, box-shadow 400ms ease-in-out, transform 1400ms; }
+  position: relative;
+  /* if button is a link */ }
+  .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 2rem;
+    background-color: #ff93e1;
+    box-shadow: 0 0.25rem 1.5rem black;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 1000ms; }
   .btn:hover {
-    animation: anticipate 500ms ease-in-out forwards;
+    animation: anticipate 400ms ease-in-out forwards;
     border: none;
-    background-color: rgba(255, 121, 218, 0.7);
-    box-shadow: 0 0.25rem 1rem black;
-    text-shadow: 0px 0px 0.2rem black;
     color: white; }
+    .btn:hover::before {
+      opacity: 0.3; }
   .btn, .btn a {
     display: block;
     text-decoration: none; }
@@ -343,13 +355,15 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: black;
   z-index: 1;
-  transition: height 1s;
   /* for the "prev" arrow link of restaurants pages */ }
   .header .container {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%; }
+  @media all and (min-width: 600px) {
+    .header {
+      transition: height 1s; } }
   @media all and (min-width: 900px) {
     .header {
       height: 7rem; } }
@@ -360,8 +374,10 @@ h2 {
   .header__logo {
     display: block;
     /* svg is inline by default */
-    margin: auto;
-    transition: transform 1s; }
+    margin: auto; }
+    @media all and (min-width: 600px) {
+      .header__logo {
+        transition: transform 1s; } }
     @media all and (min-width: 900px) {
       .header__logo {
         transform: scale(1.5); } }
@@ -407,14 +423,28 @@ body {
   width: 100%;
   margin: 0 0;
   padding: 0 5% 3.5rem 5%;
-  transition: background 1s, border 1s, border-radius 1s, width 1s, margin 1s; }
+  position: relative;
+  transition: border-radius 1s, width 1s, margin 1s; }
+  .bloc::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f6f6f6;
+    opacity: 0;
+    border-radius: 0;
+    transition: opacity 1s, border 1s;
+    z-index: -1; }
   @media all and (min-width: 600px) {
     .bloc {
       width: 90%;
-      margin: 2rem 5%;
-      border-radius: 2rem;
-      background: #f6f6f6;
-      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); } }
+      margin: 2rem 5%; }
+      .bloc::before {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        opacity: 1;
+        border-radius: 2rem; } }
 
 .container__box {
   width: 100%;
@@ -650,7 +680,9 @@ body {
         padding: 1rem 2rem;
         background: #f6f6f6;
         border-radius: 0 2rem 0 2rem;
-        width: auto; } }
+        width: auto; }
+        .restaurants h2::before {
+          border-radius: 0 2rem 0 2rem; } }
   .restaurants__box {
     z-index: 1;
     display: flex;
@@ -664,7 +696,9 @@ body {
         width: auto;
         margin: 0 2rem;
         padding: 4rem 2rem;
-        border-radius: 0 2rem 2rem 2rem; } }
+        border-radius: 0 2rem 2rem 2rem; }
+        .restaurants__box::before {
+          border-radius: 0 2rem 2rem 2rem; } }
     .restaurants__box .card {
       max-width: 500px; }
       @media all and (min-width: 600px) {
@@ -909,73 +943,73 @@ body {
         padding-right: 1rem; }
 
 .restaurant__menu__category:nth-child(1) .restaurant__item:nth-child(1) {
-  animation-delay: 1050ms;
+  animation-delay: 660ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(1) .restaurant__item:nth-child(2) {
-  animation-delay: 1250ms;
+  animation-delay: 810ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(1) .restaurant__item:nth-child(3) {
-  animation-delay: 1450ms;
+  animation-delay: 960ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(1) .restaurant__item:nth-child(4) {
-  animation-delay: 1650ms;
+  animation-delay: 1110ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(2) .restaurant__item:nth-child(1) {
-  animation-delay: 1650ms;
+  animation-delay: 1160ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(2) .restaurant__item:nth-child(2) {
-  animation-delay: 1850ms;
+  animation-delay: 1310ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(2) .restaurant__item:nth-child(3) {
-  animation-delay: 2050ms;
+  animation-delay: 1460ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(2) .restaurant__item:nth-child(4) {
-  animation-delay: 2250ms;
+  animation-delay: 1610ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(3) .restaurant__item:nth-child(1) {
-  animation-delay: 2250ms;
+  animation-delay: 1660ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(3) .restaurant__item:nth-child(2) {
-  animation-delay: 2450ms;
+  animation-delay: 1810ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(3) .restaurant__item:nth-child(3) {
-  animation-delay: 2650ms;
+  animation-delay: 1960ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }
 
 .restaurant__menu__category:nth-child(3) .restaurant__item:nth-child(4) {
-  animation-delay: 2850ms;
+  animation-delay: 2110ms;
   animation-duration: 1s;
   animation-name: anim--fadein;
   animation-fill-mode: forwards; }

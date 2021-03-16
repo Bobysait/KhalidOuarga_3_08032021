@@ -327,7 +327,7 @@
 @for $j from 1 through 3 {
 	@for $i from 1 through 4 {
 		.restaurant__menu__category:nth-child(#{$j}) .restaurant__item:nth-child(#{$i}) {
-			animation-delay			: ($j*600 + $i*200 + 250)+ms;
+			animation-delay			: ($j*500 + $i*150 +10)+ms;
 			animation-duration		: 1s;
 			animation-name			: anim--fadein;
 			animation-fill-mode		: forwards;
