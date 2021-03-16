@@ -506,7 +506,7 @@ body {
   color: #000; }
   @media all and (min-width: 600px) {
     .geolocalisation {
-      transition: width 1s, position 1s, border 1s, border-radius 1s; } }
+      transition: width 1s, border 1s, border-radius 1s; } }
   .geolocalisation .fa-map-marker-alt {
     margin: auto;
     padding-right: 1rem; }
@@ -622,18 +622,28 @@ body {
 .restaurants {
   color: #000;
   background: #f6f6f6;
-  transition: background 1s; }
+  position: relative; }
+  .restaurants::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 2s; }
   @media all and (min-width: 600px) {
-    .restaurants {
-      background: #fff; } }
+    .restaurants::before {
+      opacity: 1; } }
   @media all and (min-width: 900px) {
     .restaurants {
-      border-radius: 2rem;
       margin-bottom: 5rem; } }
   .restaurants h2 {
     width: 100%;
     max-width: 500px;
-    margin: 0 0; }
+    margin: 0 0;
+    z-index: 1; }
     @media all and (min-width: 600px) {
       .restaurants h2 {
         margin-top: 3rem;
@@ -642,6 +652,7 @@ body {
         border-radius: 0 2rem 0 2rem;
         width: auto; } }
   .restaurants__box {
+    z-index: 1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -664,19 +675,19 @@ body {
           max-width: 45%; } }
 
 .restaurant {
-  transition: border-radius 2s, background 2s, margin 2s, width 2s;
+  background: #fff;
+  transition: border-radius 2s, margin 2s, width 2s;
   /* ****** List of meals ***** */ }
   @media all and (min-width: 600px) {
     .restaurant {
-      background: #fff;
-      margin: 2rem 4.99%;
-      width: 90%; } }
+      width: 90%;
+      margin: 2rem 4.99%; } }
   @media all and (min-width: 900px) {
     .restaurant.container__box {
-      margin: auto;
+      position: relative;
       width: 95%;
       max-width: 900px;
-      position: relative; } }
+      margin: auto; } }
   .restaurant__heading {
     display: flex;
     flex-direction: row;
@@ -684,7 +695,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     background: #f6f6f6;
-    transition: border-radius 2s, background 2s, margin 2s;
+    transition: border-radius 2s, margin 2s;
     		/*
     		@media all and (min-query("wide")){
     			position				: absolute;
@@ -713,9 +724,9 @@ body {
         margin: 0 0 2rem 0;
         padding: 2rem 2rem 1rem 2rem;
         border-radius: 3rem;
-        background: #f6f6f6;
         left: -2.5rem;
-        top: -2.5rem; } }
+        top: -2.5rem;
+        transition: border-radius 2s, margin 2s; } }
     .restaurant__heading--image {
       width: 100%;
       height: auto;
