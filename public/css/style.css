@@ -211,6 +211,9 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
+html {
+  scroll-behavior: smooth; }
+
 * {
   font-family: 'Roboto', verdana, sans-serif;
   font-size: 1em;
@@ -244,8 +247,10 @@ h2 {
     background-color: rgba(255, 121, 218, 0.7);
     box-shadow: 0 0.25rem 1rem black;
     text-shadow: 0px 0px 0.2rem black;
-    /* transform		: scale(1.5); */
     color: white; }
+  .btn, .btn a {
+    display: block;
+    text-decoration: none; }
 
 @keyframes anticipate {
   0% {
