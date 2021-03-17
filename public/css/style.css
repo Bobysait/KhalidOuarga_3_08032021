@@ -563,7 +563,8 @@ body {
     content: 'Nouveau';
     color: green;
     background: #99E2D0;
-    display: block; }
+    display: block;
+    animation: anim-grow 1500ms ease-in-out infinite; }
   .card--left > .card__image {
     width: 40%;
     border-radius: 16px 0 0 16px; }
@@ -576,6 +577,15 @@ body {
   .card__title {
     font-weight: bold; }
 
+@keyframes anim-grow {
+  0%,25%,50% {
+    transform: scale(1) rotate(0deg); }
+  12%,37% {
+    transform: scale(1.1) rotate(0deg); }
+  6%,32% {
+    transform: scale(1.05) rotate(-5deg); }
+  16%,44% {
+    transform: scale(1.05) rotate(5deg); } }
 .like {
   position: absolute;
   right: 1rem; }
@@ -766,7 +776,10 @@ body {
         .restaurants__box::before {
           border-radius: 0 2rem 2rem 2rem; } }
     .restaurants__box .card {
-      max-width: 500px; }
+      max-width: 500px;
+      transition: transform 250ms cubic-bezier(0.2, -2, 0.8, 2); }
+      .restaurants__box .card:hover {
+        transform: scale(1.05); }
       @media all and (min-width: 600px) {
         .restaurants__box .card {
           margin-bottom: 2rem; } }
@@ -915,7 +928,8 @@ body {
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: flex-start;
-      align-content: center; }
+      align-content: center;
+      /* force first menu to lie on the left using a dummy container */ }
       .restaurant__menu__categories::before {
         content: "";
         width: 50%;
@@ -958,8 +972,8 @@ body {
     background: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
-    cursor: pointer;
-    opacity: 0; }
+    opacity: 0;
+    cursor: pointer; }
     .restaurant__item__check {
       float: right;
       font-size: 2rem;

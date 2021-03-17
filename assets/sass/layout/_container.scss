@@ -85,6 +85,8 @@ body {
 		color				: green;
 		background			: $colour_tertiary;
 		display				: block;
+
+		animation			: anim-grow 1500ms ease-in-out infinite;
 	}
 	
 	&--left > &__image {
@@ -105,6 +107,13 @@ body {
 	&__title {
 		font-weight			: bold;
 	}
+}
+
+@keyframes anim-grow {
+	 0%,25%,50% { transform : scale(1.00) rotate(0deg); }
+	 12%,37% { transform : scale(1.10) rotate(0deg); }
+	 6%,32%{ transform : scale(1.05) rotate(-5deg)}
+	 16%,44%{ transform : scale(1.05) rotate(5deg)}
 }
 
 .like {

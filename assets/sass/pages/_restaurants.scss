@@ -180,11 +180,12 @@
 			justify-content			: space-around;
 			align-items				: flex-start;
 			align-content			: center;
-
+			
+			/* force first menu to lie on the left using a dummy container */
 			&::before {
-				content : "";
-				width:50%;
-				height : 1px;
+				content				: "";
+				width				: 50%;
+				height				: 1px;
 			}
 	}
 
@@ -225,7 +226,6 @@
 			margin-bottom			: 1rem;
 			padding					: 0;
 			list-style				: none;
-
 		}
 
 		&__btn {
@@ -246,11 +246,10 @@
 		background					: $colour_lighter-back;
 		box-shadow					: 0 4px 10px rgba(0,0,0,0.2);
 		border-radius				: 1rem;
+		opacity						: 0;
 		
 		cursor						: pointer;
-
-		opacity						: 0;
-
+		
 		&__check {
 			float					: right;
 			font-size				: 2rem;
