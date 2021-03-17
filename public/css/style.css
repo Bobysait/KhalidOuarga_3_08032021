@@ -972,7 +972,7 @@ body {
       color: white;
       min-width: 0;
       width: 0;
-      transition: width 400ms; }
+      transition: width 400ms cubic-bezier(0.2, 0.5, 0.3, 2); }
       .restaurant__item__check::after {
         content: "\f058";
         transform: rotate(90deg);
