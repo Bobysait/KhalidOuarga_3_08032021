@@ -79,9 +79,8 @@
 			}
 			
 			@media all and (min-query("desktop")){
-				border-radius		: 1.5rem;
+				border-radius		: 1.5rem 1.5rem 0 0;
 				box-shadow			: 0 4px 2rem rgba($colour_darker-back,0.3);
-				border				: 0.5rem solid $colour_light-back;
 				border				: 0.2rem solid $colour_lighter-back;
 			}
 			/*
@@ -289,7 +288,7 @@
 			opacity					: 1;
 		}
 		*/
-		
+
 		/* mod : checkbox:checked instead of hover */
 		&__checkbox {
 			/* disables display of the checkbox */
