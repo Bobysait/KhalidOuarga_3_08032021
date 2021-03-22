@@ -276,6 +276,10 @@
 			}
 		}
 
+		/* mod : checkbox:checked instead of hover
+		remove "hover" part
+		 */
+		/*
 		&:hover &__check {
 			width					: 5rem;
 		}
@@ -284,7 +288,21 @@
 			transform				: rotate(360deg);
 			opacity					: 1;
 		}
+		*/
 		
+		/* mod : checkbox:checked instead of hover */
+		&__checkbox {
+			/* disables display of the checkbox */
+			display					: none;
+		}
+		&__checkbox:checked~&__check {
+			width					: 5rem;
+		}
+		&__checkbox:checked~&__check::after {
+			transform				: rotate(360deg);
+			opacity					: 1;
+		}
+
 		&__texts {
 			width					: auto;
 			height					: 100%;

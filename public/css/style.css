@@ -303,7 +303,7 @@ h2 {
 .anim-length-medium {
   animation: loader__anim 2s forwards; }
 .anim-length-long {
-  animation: loader__anim 4s forwards; }
+  animation: loader__anim 4000s forwards; }
 
 .loader {
   position: fixed;
@@ -973,7 +973,21 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
     opacity: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    /* mod : checkbox:checked instead of hover
+    remove "hover" part
+     */
+    		/*
+    		&:hover &__check {
+    			width					: 5rem;
+    		}
+    
+    		&:hover &__check::after {
+    			transform				: rotate(360deg);
+    			opacity					: 1;
+    		}
+    		*/
+    /* mod : checkbox:checked instead of hover */ }
     .restaurant__item__check {
       float: right;
       font-size: 2rem;
@@ -992,9 +1006,12 @@ body {
         transform: rotate(90deg);
         opacity: 0;
         transition: transform 400ms ease-in-out, opacity 250ms linear; }
-    .restaurant__item:hover .restaurant__item__check {
+    .restaurant__item__checkbox {
+      /* disables display of the checkbox */
+      display: none; }
+    .restaurant__item__checkbox:checked ~ .restaurant__item__check {
       width: 5rem; }
-    .restaurant__item:hover .restaurant__item__check::after {
+    .restaurant__item__checkbox:checked ~ .restaurant__item__check::after {
       transform: rotate(360deg);
       opacity: 1; }
     .restaurant__item__texts {
