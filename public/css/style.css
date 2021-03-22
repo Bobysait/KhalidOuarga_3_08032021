@@ -1005,6 +1005,8 @@ body {
         transform: rotate(90deg);
         opacity: 0;
         transition: transform 400ms ease-in-out, opacity 250ms linear; }
+    .restaurant__item__label {
+      cursor: pointer; }
     .restaurant__item__checkbox {
       /* disables display of the checkbox */
       display: none; }

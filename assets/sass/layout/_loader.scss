@@ -2,22 +2,22 @@
 
 .anim-length {
 	&-small {
-		animation					: loader__anim 1500ms forwards;
+		animation				: loader__anim 1500ms forwards;
 	}
 	&-medium {
-		animation					: loader__anim 2s forwards;
+		animation				: loader__anim 2s forwards;
 	}
 	&-long {
-		animation					: loader__anim 4s forwards;
+		animation				: loader__anim 4s forwards;
 	}
 }
 
 @mixin emit-word($word,$fontsize,$col,$anim, $opacity){
-	content				: $word;
-	font-size			: $fontsize;
-	color				: $col;
-	animation			: map-get($anim, "name") map-get($anim, "length") map-get($anim, "style") map-get($anim,"mode");
-	opacity				: $opacity;
+	content						: $word;
+	font-size					: $fontsize;
+	color						: $col;
+	animation					: map-get($anim, "name") map-get($anim, "length") map-get($anim, "style") map-get($anim,"mode");
+	opacity						: $opacity;
 }
 
 .loader {
