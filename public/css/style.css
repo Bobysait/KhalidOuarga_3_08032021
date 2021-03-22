@@ -303,7 +303,7 @@ h2 {
 .anim-length-medium {
   animation: loader__anim 2s forwards; }
 .anim-length-long {
-  animation: loader__anim 4000s forwards; }
+  animation: loader__anim 4s forwards; }
 
 .loader {
   position: fixed;
